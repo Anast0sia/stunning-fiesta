@@ -29,7 +29,8 @@ public class Main {
         try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(zipName))) {
             for (String fileName : fileNames) {
                 try (FileInputStream fis = new FileInputStream(fileName)) {
-                    ZipEntry entry = new ZipEntry(fileName);
+                    File file = new File(fileName);
+                    ZipEntry entry = new ZipEntry(file.getName());
                     zos.putNextEntry(entry);
                     int i;
                     byte[] buffer = new byte[1024];
