@@ -21,7 +21,7 @@ public class Main {
             oos.writeObject(gp);
             list.add(fileName);
         } catch (IOException e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
         }
     }
 
@@ -38,11 +38,11 @@ public class Main {
                     }
                     zos.closeEntry();
                 } catch (IOException e) {
-                    e.getMessage();
+                    System.out.println(e.getMessage());
                 }
             }
         } catch (IOException e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
         }
         for (String fileName : fileNames) {
             new File(fileName).delete();
