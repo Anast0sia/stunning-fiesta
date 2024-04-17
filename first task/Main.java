@@ -39,7 +39,7 @@ public class Main {
                 sb.append("Создание неуспешно \n");
             }
         } catch (IOException e) {
-            e.getMessage();
+            System.out.println(e.getMessage());
         }
     }
 }
